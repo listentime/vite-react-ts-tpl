@@ -1,0 +1,255 @@
+@charset "UTF-8";
+@keyframes error {
+  from, to {
+    transform: translate3d(0, 0, 0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0);
+  }
+}
+.react-toast-icon {
+  font-family: "react-toast-icon", serif;
+  font-size: 16px;
+  font-style: normal;
+  margin-right: 5px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* .icon-xia-la:before {
+  content: "\e611";
+}
+.icon-close:before {
+  content: "\e720";
+}
+.icon-circle:before {
+  content: "\e640";
+}
+.icon-warning:before {
+  content: "\e670";
+}
+.icon-info:before {
+  content: "\e6eb";
+}
+.icon-success:before {
+  content: "\e726";
+}
+.icon-zan:before {
+  content: "\e669";
+} */
+
+.error {
+  animation: error 1s ease-in-out;
+}
+
+.react-toast {
+  width: max-content;
+  position: fixed;
+  right: 0;
+  left: 0;
+  margin: auto;
+  z-index: 999999999999999 !important;
+  transition: top 0.3s;
+}
+.react-toast .down-appear,
+.react-toast .down-exit,
+.react-toast .down-enter {
+  opacity: 0.5;
+}
+.react-toast .down-appear,
+.react-toast .down-enter {
+  position: absolute;
+  width: 100%;
+}
+.react-toast .down-appear,
+.react-toast .down-enter,
+.react-toast .down-exit-active,
+.react-toast .down-exit-done {
+  opacity: 0;
+  transform: translateY(-100%) translateZ(0);
+}
+.react-toast .down-appear-active,
+.react-toast .down-appear-done,
+.react-toast .down-enter-active,
+.react-toast .down-enter-done {
+  opacity: 1;
+  transform: translateY(0) translateZ(0);
+}
+.react-toast .down-enter-done {
+  transform: none;
+}
+.react-toast .down-appear-active,
+.react-toast .down-appear-done,
+.react-toast .down-enter-active,
+.react-toast .down-exit-active,
+.react-toast .down-enter-done,
+.react-toast .down-exit-done {
+  transition: transform 0.3s;
+}
+.react-toast .warning, .react-toast .success, .react-toast .primary, .react-toast .danger, .react-toast .info, .react-toast .loading {
+  color: #fff;
+  transition: 0.5s;
+  cursor: pointer;
+  position: relative;
+  /* padding: 0.5rem 2rem 0.5rem 2rem; */
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  /* border-radius: 4rem; */
+  border-radius: 1rem;
+  /* width: max-content; */
+  width:160px;
+  margin: 0 auto;
+  user-select: none;
+  text-align: center;
+}
+.react-toast .warning .react-toast, .react-toast .success .react-toast, .react-toast .primary .react-toast, .react-toast .danger .react-toast, .react-toast .info .react-toast, .react-toast .loading .react-toast {
+  min-width: 20px;
+  text-align: center;
+  margin-right: 5px;
+  font-weight: 400;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+.react-toast .warning .close, .react-toast .success .close, .react-toast .primary .close, .react-toast .danger .close, .react-toast .info .close, .react-toast .loading .close {
+  height: 20px;
+  position: absolute;
+  top: 0;
+  right: 15px;
+  bottom: 0;
+  margin: auto;
+  font-size: 15px;
+  line-height: 20px;
+  text-shadow: 0 0 0 #fff;
+  cursor: pointer;
+}
+.react-toast .warning strong, .react-toast .success strong, .react-toast .primary strong, .react-toast .danger strong, .react-toast .info strong, .react-toast .loading strong {
+  font-weight: bold;
+  text-align: center !important;
+}
+.react-toast .success {
+  /* box-shadow: 1px 9px 20px 0 rgba(103, 194, 58, 0.6); */
+  /* background-color: #67c23a; */
+  box-shadow: 1px 9px 20px 0 rgba(0, 0, 0, 0.6);
+  background-color:rgba(0,0,0,0.7);
+}
+.react-toast .warning {
+  box-shadow: 1px 9px 20px 0 rgba(230, 162, 60, 0.6);
+  background-color: #E6A23C;
+}
+.react-toast .primary {
+  box-shadow: 1px 9px 20px 0 rgba(64, 158, 255, 0.6);
+  background-color: #409EFF;
+}
+.react-toast .danger {
+  box-shadow: 1px 9px 20px 0 rgba(245, 108, 108, 0.6);
+  background-color: #F56C6C;
+}
+.react-toast .info {
+  box-shadow: 1px 9px 20px 0 rgba(144, 147, 153, 0.6);
+  background-color: #909399;
+}
+.react-toast .loading {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: max-content;
+  background-color: #7858ff;
+  box-shadow: 1px 9px 20px 0 rgba(120, 88, 255, 0.6);
+}
+
+.react-toast:nth-child(1) {
+  top: -20px;
+}
+
+.react-toast:nth-child(2) {
+  top: 30px;
+}
+
+.react-toast:nth-child(3) {
+  /* top: 80px; */
+  top: 250px;
+
+}
+
+.react-toast:nth-child(4) {
+  top: 130px;
+}
+
+.react-toast:nth-child(5) {
+  top: 180px;
+}
+
+.react-toast:nth-child(6) {
+  top: 230px;
+}
+
+.react-toast:nth-child(7) {
+  top: 280px;
+}
+
+.react-toast:nth-child(8) {
+  top: 330px;
+}
+
+.react-toast:nth-child(9) {
+  top: 380px;
+}
+
+.react-toast:nth-child(10) {
+  top: 430px;
+}
+
+.react-toast:nth-child(11) {
+  top: 480px;
+}
+
+.react-toast:nth-child(12) {
+  top: 530px;
+}
+
+.react-toast:nth-child(13) {
+  top: 580px;
+}
+
+.react-toast:nth-child(14) {
+  top: 630px;
+}
+
+.react-toast:nth-child(15) {
+  top: 680px;
+}
+
+.react-toast:nth-child(16) {
+  top: 730px;
+}
+
+.react-toast:nth-child(17) {
+  top: 780px;
+}
+
+.react-toast:nth-child(18) {
+  top: 830px;
+}
+
+.react-toast:nth-child(19) {
+  top: 880px;
+}
+
+.react-toast:nth-child(20) {
+  top: 930px;
+}
+
+.react-toast.loading {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+}

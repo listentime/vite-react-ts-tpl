@@ -1,0 +1,54 @@
+{
+	"name": "esgc-luck",
+	"version": "0.0.0",
+	"templateInfo": {
+		"typescript": true,
+		"css": "stylus"
+	},
+	"scripts": {
+		"dev": "vite",
+		"build-prod": "tsc && vite build",
+		"build-prod-gray":"tsc && vite build --mode staging",
+		"build-dev": "vite build --mode development",
+		"serve": "vite preview",
+		"preinstall": "sh pnpm-env.sh"
+	},
+	"dependencies": {
+		"@types/classnames": "^2.2.10",
+		"@types/react-loadable": "^5.5.5",
+		"@types/react-router": "^5.1.13",
+		"@types/react-router-dom": "^5.1.7",
+		"@types/react-transition-group": "^4.4.1",
+		"@vitejs/plugin-legacy": "^1.4.0",
+		"ahooks": "^2.10.0",
+		"antd": "^4.16.0",
+		"autoprefixer": "^10.2.5",
+		"classnames": "^2.2.6",
+		"jsencrypt": "^3.1.0",
+		"postcss": "^8.2.13",
+		"postcss-px-to-viewport": "^1.1.1",
+		"ramda": "^0.27.1",
+		"react": "^17.0.0",
+		"react-dom": "^17.0.0",
+		"react-loadable": "^5.5.0",
+		"react-router-dom": "^5.2.0",
+		"react-slick": "^0.28.1",
+		"react-transition-group": "^4.4.1",
+		"rollup-plugin-postcss": "^4.0.0",
+		"slick-carousel": "^1.8.1",
+		"stylus": "^0.54.8",
+		"zustand": "^3.4.2"
+	},
+	"devDependencies": {
+		"@types/node": "^15.0.1",
+		"@types/react": "^17.0.0",
+		"@types/react-dom": "^17.0.0",
+		"@vitejs/plugin-react-refresh": "^1.3.1",
+		"autoprefixer": "^10.2.5",
+		"postcss-px-to-viewport": "^1.1.1",
+		"postcss-pxtorem": "^6.0.0",
+		"typescript": "^4.1.2",
+		"vite": "^2.1.5"
+	},
+	"description": "自用抽奖项目"
+}
